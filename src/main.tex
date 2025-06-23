@@ -1,0 +1,166 @@
+\documentclass[a4paper, 11pt, openany]{book}
+
+% packages
+\usepackage[margin=2.5cm, headsep=1cm]{geometry} % general layout
+\usepackage[american]{babel} % for citations
+\usepackage{csquotes} % for citations
+\usepackage[style=apa, sortcites=true, sorting=nyt, backend=biber, natbib=true, language=american]{biblatex} % for citations
+\usepackage{fontspec} % for fonts
+\usepackage{titlesec} % for alternative section titles
+\usepackage{sectsty} % change chapter title size
+\usepackage{setspace} % for line spacing
+\usepackage{fancyhdr} % for headers
+\usepackage{afterpage} % for blank pages
+\usepackage[dvipsnames]{xcolor} % for colors
+\usepackage{graphicx} % for figures
+\usepackage{caption} % for figure and table captions
+\usepackage[titletoc]{appendix} % for appendices
+\usepackage{amsmath, mathtools} % for math
+\usepackage{bookmark} % hyperref dependency
+\usepackage{hyperref} % for hyperlinks
+\usepackage{acro} % for abbreviations (acronyms)
+
+% commands
+\newcommand{\blankpage}{
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-1}
+    \newpage}
+% hide blank pages numbers + headers
+\let\origdoublepage\cleardoublepage
+\newcommand{\clearemptydoublepage}{
+    \clearpage{\pagestyle{empty}\origdoublepage}}
+
+\newcommand{\B}{\operatorname{B}}
+
+
+% general layout
+\setstretch{1.1} % line spacing
+% \renewcommand{\baselinestretch}{1.15} % line spacing
+% \linespread{1.15}
+
+\setcounter{tocdepth}{3} % 4 level contents
+\setcounter{secnumdepth}{3} % numbered 4 level contents
+
+
+% chapter layout
+\titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
+
+
+% font
+\setmainfont{Times New Roman}
+
+
+% internal reference links and hyperlinks setup
+\hypersetup{hidelinks}
+
+
+% figures
+%
+
+
+% abbreviations
+\acsetup{
+  list/name=List of Abbreviations,
+  make-links=true
+}
+
+\DeclareAcronym{fcul}{
+    short=FCUL,
+    long=Faculdade de Ciências da Universidade de Lisboa,
+}
+
+\DeclareAcronym{etc}{
+    short=etc,
+    long=et cetera,
+}
+
+
+% references
+\DeclareLanguageMapping{american}{american-apa}
+\DeclareSourcemap{
+    \maps[datatype=bibtex]{
+        \map{
+            \step[fieldsource=issue, fieldtarget=number]
+        }
+    }
+}
+\addbibresource{refs.bib}
+
+
+\begin{document}
+
+
+% Front Matter
+
+\begingroup
+
+\newgeometry{left=3cm, right=3cm, top=1cm, bottom=1.2cm}
+\setmainfont{Arial Narrow}
+
+\include{parts/cover_temp}
+% \include{parts/cover_final}
+
+\endgroup
+
+
+\pagenumbering{roman}
+\pagestyle{plain}
+\let\cleardoublepage\clearemptydoublepage % hide blank pages numbers + headers
+
+\makeatletter \@openrighttrue \makeatother
+
+\include{parts/acknowledgements}
+
+\include{parts/abstract} % max 300 words + max 5 keywords
+
+\include{parts/resumo_alargado} % 1200-1500 words
+
+\tableofcontents
+
+\makeatletter \@openrightfalse \makeatother
+
+\listoffigures
+
+\listoftables
+
+\printacronyms
+\newpage
+
+\makeatletter \@openrighttrue \makeatother
+
+
+% Main Matter
+
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
+
+\include{parts/introduction}
+
+\makeatletter \@openrightfalse \makeatother
+
+\include{parts/materials_methods}
+
+\include{parts/results}
+
+\include{parts/discussion}
+
+\include{parts/conclusion}
+
+
+\include{parts/references}
+
+
+% Back Matter
+
+\pagestyle{plain} % no more header
+\makeatletter \@openrighttrue \makeatother
+
+\begin{appendices}
+    \include{parts/app_a}
+    \include{parts/app_b}
+\end{appendices}
+
+
+\end{document}
