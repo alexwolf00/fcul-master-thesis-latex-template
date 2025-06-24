@@ -23,13 +23,6 @@
             ]
         },
         {
-            "name": "bibtex",
-            "command": "bibtex",
-            "args": [
-                "%DOCFILE%"
-            ]
-        },
-        {
             "name": "biber",
             "command": "biber",
             "args": [
