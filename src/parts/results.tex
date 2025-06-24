@@ -36,11 +36,20 @@ Some tables are also useful to illustrate other results.
 % example of a table
 \begin{table}[h]
     \centering
-    \caption{This is a different caption.}
+    \caption{This is a different caption. Here we have a standard confusion matrix.}
     \label{tab:example}
-    \begin{tabular}{|l|}
-        ... a table ...
-    \end{tabular}
+    \begin{tabular}{@{}cccc@{}}
+        \multicolumn{2}{c}{\multirow{2}{*}{}} & \multicolumn{2}{c}{Predicted} \\
+        \cmidrule(lr){3-4}
+        \multicolumn{2}{c}{} & Positive & Negative \\
+        \cmidrule{2-4}
+        \multirow[c]{2}{*}{\rotatebox[origin=c]{90}{Real}} & Positive & True Positives & False Negatives \\
+        & Negative & False Positives & True Negatives \\
+        \cmidrule{2-4}
+\end{tabular}
 \end{table}
+
+% A good table resource:
+% https://www.tablesgenerator.com
 
 \ldots
