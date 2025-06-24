@@ -13,6 +13,8 @@
 \usepackage{afterpage} % for blank pages
 \usepackage[dvipsnames]{xcolor} % for colors
 \usepackage{graphicx} % for figures
+\usepackage{booktabs} % for tables
+\usepackage{multirow} % for tables
 \usepackage{caption} % for figure and table captions
 \usepackage[titletoc]{appendix} % for appendices
 \usepackage{amsmath, mathtools} % for math
@@ -26,18 +28,19 @@
     \thispagestyle{empty}
     \addtocounter{page}{-1}
     \newpage}
+
 % hide blank pages numbers + headers
 \let\origdoublepage\cleardoublepage
 \newcommand{\clearemptydoublepage}{
     \clearpage{\pagestyle{empty}\origdoublepage}}
 
-\newcommand{\B}{\operatorname{B}}
-
 
 % general layout
-\setstretch{1.1} % line spacing
-% \renewcommand{\baselinestretch}{1.15} % line spacing
-% \linespread{1.15}
+% 1.15 MS Word line spacing for Times New Roman 11pt
+% (1.15 * MS Word leading / MS Word text height) / (LaTeX leading / LaTeX text height)
+% (1.15*2355/2048) / (13.6/11) = 1.0695782829733456
+% https://tex.stackexchange.com/questions/442030/setting-spaces-with-titlespacing-and-fonts/442065#442065
+\setstretch{1.0695782829733456}
 
 \setcounter{tocdepth}{3} % 4 level contents
 \setcounter{secnumdepth}{3} % numbered 4 level contents
@@ -47,16 +50,18 @@
 \titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
 
 
+% figure and table captions
+\DeclareCaptionFormat{myformat}{\fontsize{9pt}{12pt}\selectfont \textbf{#1#2}#3}
+\captionsetup{format=myformat, font={stretch=0.8624267578125}, labelsep=period, tableposition=top, figureposition=bottom}
+% (1*2355/2048) / (12/9) = 0.8624267578125
+
+
 % font
 \setmainfont{Times New Roman}
 
 
 % internal reference links and hyperlinks setup
 \hypersetup{hidelinks}
-
-
-% figures
-%
 
 
 % abbreviations
@@ -112,6 +117,7 @@
 
 \include{parts/acknowledgements}
 
+
 \include{parts/abstract} % max 300 words + max 5 keywords
 
 \include{parts/resumo_alargado} % 1200-1500 words
@@ -158,8 +164,8 @@
 \makeatletter \@openrighttrue \makeatother
 
 \begin{appendices}
-    \include{parts/app_a}
-    \include{parts/app_b}
+    \include{parts/appendix_a}
+    \include{parts/appendix_b}
 \end{appendices}
 
 
