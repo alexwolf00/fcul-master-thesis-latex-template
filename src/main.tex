@@ -51,9 +51,6 @@
 
 
 % figure and table captions
-% \DeclareCaptionFormat{myformat}{\fontsize{9pt}{12pt}\selectfont \textbf{#1#2}#3}
-% \captionsetup{format=myformat, font={stretch=0.8624267578125}, labelsep=period, tableposition=top, figureposition=bottom}
-% (1*2355/2048) / (12/9) = 0.8624267578125
 \captionsetup{font=footnotesize, labelfont=bf, labelsep=period, tableposition=top, figureposition=bottom}
 
 
@@ -114,10 +111,9 @@
 \pagestyle{plain}
 \let\cleardoublepage\clearemptydoublepage % hide blank pages numbers + headers
 
-\makeatletter \@openrighttrue \makeatother
+\makeatletter \@openrighttrue \makeatother % start new chapters on odd pages
 
 \include{parts/acknowledgements}
-
 
 \include{parts/abstract} % max 300 words + max 5 keywords
 
@@ -125,7 +121,7 @@
 
 \tableofcontents
 
-\makeatletter \@openrightfalse \makeatother
+\makeatletter \@openrightfalse \makeatother % start new chapters on even pages
 
 \listoffigures
 
@@ -134,7 +130,7 @@
 \printacronyms
 \newpage
 
-\makeatletter \@openrighttrue \makeatother
+\makeatletter \@openrighttrue \makeatother % start new chapters on odd pages
 
 
 % Main Matter
@@ -145,7 +141,7 @@
 
 \include{parts/introduction}
 
-\makeatletter \@openrightfalse \makeatother
+\makeatletter \@openrightfalse \makeatother % start new chapters on even pages
 
 \include{parts/materials_methods}
 
@@ -161,8 +157,8 @@
 
 % Back Matter
 
-\pagestyle{plain} % no more header
-\makeatletter \@openrighttrue \makeatother
+\pagestyle{plain} % no more header from here on
+\makeatletter \@openrighttrue \makeatother % start new chapters on odd pages
 
 \begin{appendices}
     \include{parts/appendix_a}
