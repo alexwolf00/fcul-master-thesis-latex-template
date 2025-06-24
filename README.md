@@ -4,6 +4,7 @@ This is a $\LaTeX$ template for a FCUL Master's thesis written in English.
 
 The structure of this template is loosely inspired by the [`templates_latex_fcul`](https://github.com/dpavot/templates_latex_fcul) Github repository.
 
+
 ## How To Use This Template
 
 Get a copy of [src](src) and edit the files inside as needed.
@@ -15,4 +16,4 @@ This template follows the official FCUL layout norms for the **2024/2025** acade
 
 
 ## VSCode Workspace Settings
-To be able to compile your document in VSCode, include the settings provided in [src/.vscode/settings.json](src/.vscode/settings.json) in your workspace `settings.json` file.
+To be able to compile your document in VSCode, include the settings provided in [src/.vscode/settings.json](src/.vscode/settings.json) in your workspace `settings.json` file. If you copied [src](src) as is, this is already taken care of.
