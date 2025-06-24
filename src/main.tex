@@ -101,8 +101,8 @@
 \newgeometry{left=3cm, right=3cm, top=1cm, bottom=1.2cm}
 \setmainfont{Arial Narrow}
 
-\include{parts/cover_temp}
-% \include{parts/cover_final}
+\include{chapters/cover_temp}
+% \include{chapters/cover_final}
 
 \endgroup
 
@@ -113,11 +113,11 @@
 
 \makeatletter \@openrighttrue \makeatother % start new chapters on odd pages
 
-\include{parts/acknowledgements}
+\include{chapters/acknowledgements}
 
-\include{parts/abstract} % max 300 words + max 5 keywords
+\include{chapters/abstract} % max 300 words + max 5 keywords
 
-\include{parts/resumo_alargado} % 1200-1500 words
+\include{chapters/resumo_alargado} % 1200-1500 words
 
 \tableofcontents
 
@@ -139,20 +139,20 @@
 \pagestyle{fancy}
 \setlength{\headheight}{14pt}
 
-\include{parts/introduction}
+\include{chapters/introduction}
 
 \makeatletter \@openrightfalse \makeatother % start new chapters on even pages
 
-\include{parts/materials_methods}
+\include{chapters/materials_methods}
 
-\include{parts/results}
+\include{chapters/results}
 
-\include{parts/discussion}
+\include{chapters/discussion}
 
-\include{parts/conclusion}
+\include{chapters/conclusion}
 
 
-\include{parts/references}
+\include{chapters/references}
 
 
 % Back Matter
@@ -161,8 +161,8 @@
 \makeatletter \@openrighttrue \makeatother % start new chapters on odd pages
 
 \begin{appendices}
-    \include{parts/appendix_a}
-    \include{parts/appendix_b}
+    \include{chapters/appendix_a}
+    \include{chapters/appendix_b}
 \end{appendices}
 
 
