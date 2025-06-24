@@ -5,7 +5,7 @@ This is a $\LaTeX$ template for a FCUL Master's thesis written in English.
 The structure of this template is loosely inspired by the [`templates_latex_fcul`](https://github.com/dpavot/templates_latex_fcul) Github repository.
 
 
-## How To Use This Template
+## How to Use This Template
 
 Get a copy of [src](src) and edit the `*.tex` files in [chapters](src/chapters) as needed. If your thesis structure differs from the generic one in [template_output.pdf](src/template_output.pdf), edit [main.tex](src/main.tex) and add, remove, and/or rename the other `*.tex` files as needed.
 
