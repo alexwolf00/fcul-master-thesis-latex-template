@@ -1,4 +1,4 @@
-\documentclass[a4paper, 11pt, openany]{book}
+\documentclass[a4paper, 11pt]{book}
 
 % packages
 \usepackage[margin=2.5cm, headsep=1cm]{geometry} % general layout
@@ -29,7 +29,7 @@
     \addtocounter{page}{-1}
     \newpage}
 
-% hide blank pages numbers + headers
+% hide blank page numbers + headers
 \let\origdoublepage\cleardoublepage
 \newcommand{\clearemptydoublepage}{
     \clearpage{\pagestyle{empty}\origdoublepage}}
@@ -104,14 +104,14 @@
 \include{chapters/cover_temp}
 % \include{chapters/cover_final}
 
+\afterpage{\blankpage}
+
 \endgroup
 
 
 \pagenumbering{roman}
 \pagestyle{plain}
-\let\cleardoublepage\clearemptydoublepage % hide blank pages numbers + headers
-
-\makeatletter \@openrighttrue \makeatother % start new chapters on odd pages
+\let\cleardoublepage\clearemptydoublepage % hide blank page numbers + headers
 
 \include{chapters/acknowledgements}
 
