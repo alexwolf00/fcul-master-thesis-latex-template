@@ -18,4 +18,4 @@ If you'd like to see this template updated, feel free to make a pull request.
 
 
 ## VSCode Workspace Settings
-To be able to compile your document in VSCode, include the settings provided in [src/.vscode/settings.json](src/.vscode/settings.json) in your workspace `settings.json` file. If you copied [src](src) as is, this is already taken care of.
+To be able to compile your document in VSCode, include the settings provided in [settings.json](src/.vscode/settings.json) in your workspace `settings.json` file. If you copied [src](src) as is, this is already taken care of.
