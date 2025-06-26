@@ -2,7 +2,7 @@
 
 This is a $\LaTeX$ template for a FCUL Master's thesis written in English.
 
-The structure of this template is loosely inspired by the [`templates_latex_fcul`](https://github.com/dpavot/templates_latex_fcul) Github repository.
+The structure of this template is loosely inspired by the [`templates_latex_fcul`](https://github.com/dpavot/templates_latex_fcul) GitHub repository.
 
 
 ## How To Use This Template
