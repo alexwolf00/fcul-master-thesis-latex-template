@@ -11,6 +11,10 @@ Get a copy of [src](src) and edit the `*.tex` files in [chapters](src/chapters) 
 
 Once you're ready to get a `.pdf` output, compile `main.tex`.
 
+### Overleaf users
+
+Get a copy of all the files in [src](src), minus the [.vscode](src/.vscode) folder and include them in a new Overleaf project. Edit the `*.tex` files as described above and compile your document from [main.tex](src/main.tex).
+
 
 ## Document Norms
 
