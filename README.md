@@ -8,6 +8,7 @@ The structure of this template is loosely inspired by the [`templates_latex_fcul
 ## How To Use This Template
 
 Get a copy of [src](src) and edit the `*.tex` files in [chapters](src/chapters) as needed. If your thesis structure differs from the generic one in [template_output.pdf](src/template_output.pdf), edit [main.tex](src/main.tex) and add, remove, and/or rename the other `*.tex` files as needed.
+
 Once you're ready to get a `.pdf` output, compile `main.tex`.
 
 
